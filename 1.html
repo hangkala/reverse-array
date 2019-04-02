@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết một chương trình JavaScript thực hiện đảo ngược các giá trị trong một mảng đã cho. Không sử dụng phương thức reverse()
+    let arr = [];
+    let i = 0;
+    let n = parseInt(prompt('Nhập độ dài chuỗi số bạn muốn vào đây')); //array.length
+
+    for (i = 0; i <= (n - 1); i++){
+        arr[i] = parseInt(prompt('Nhập giá trị thứ ' + i + '='));
+    }
+    alert(arr);
+    let first = 0;
+    let last = (n -1);
+
+    while (first < last){
+        let a = arr[first]
+        arr [first] = arr [last];
+        arr[last] = a;
+        first++;
+        last--;
+    }
+    alert(arr);
+
+</script>
+</body>
+</html>
